@@ -1,0 +1,87 @@
+$numberOfStars: 250;
+$numberOfShooting: 3;
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sky {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+	background: linear-gradient(to bottom, #1d4253 0%, #6bb5c4 100%);
+	border-radius: 50%;
+	height: 280px;
+	width: 280px;
+
+	.star{
+		background-color: #FFF;
+		border-radius: 50%;
+		height: 1px;
+		position: absolute;
+		width: 1px;
+		animation-fill-mode: forwards;
+		opacity: 1;
+	}
+
+	.star__shooting{
+		background: url('https://100dayscss.com/codepen/shooting-star.png') center center no-repeat;
+		width: 120px;
+    height: 2px;
+    transform: rotate(15deg);
+		position: absolute;
+
+	}
+}
+
+
+
+@for $i from 1 through $numberOfStars {
+	.star.star-#{$i} {
+		top: random(280) + px;
+		left: random(280) + px;
+		animation: random(5) + s sparkle (random(50)/-10) + s infinite;
+	}
+}
+
+@for $i from 1 through $numberOfShooting {
+	.star__shooting.shooting-#{$i} {
+		top: (random(280)-40) + px;
+		animation: (random(6) + 10) + s shooting ((random(5) + 10)/-10) + s infinite normal none running;
+	}
+}
+
+@keyframes sparkle {
+	0%{ opacity: 1;}
+	50%{ opacity: 0.3;}
+	100%{ opacity: 1;}
+}
+
+@keyframes shooting{
+	0%{
+		transform: rotate(15deg) translateX(-120px);
+	}
+	10%,100% {
+		transform: translate(400px,140px) rotate(15deg);
+	}
+}
+
