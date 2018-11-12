@@ -1,0 +1,111 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+	overflow: hidden;
+}
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #27ae60;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.dot {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: 2s ease-in-out;
+	transform-origin: 0 100px;
+}
+
+
+@keyframes lvl-0 {
+	0% {
+		transform: rotate(0deg) scale(0.8);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+@keyframes lvl-1 {
+	0% {
+		transform: rotate(5deg) scale(0.7);
+	}
+
+	100% {
+		transform: rotate(365deg) scale(0.95);
+	}
+}
+
+@keyframes lvl-2 {
+	0% {
+		transform: rotate(10deg) scale(0.6);
+	}
+
+	100% {
+		transform: rotate(370deg) scale(0.9);
+	}
+}
+
+@keyframes lvl-3 {
+	0% {
+		transform: rotate(15deg) scale(0.5);
+	}
+
+	100% {
+		transform: rotate(375deg) scale(0.85);
+	}
+}
+
+@keyframes lvl-4 {
+	0% {
+		transform: rotate(20deg) scale(0.4);
+	}
+
+	100% {
+		transform: rotate(380deg) scale(0.8);
+	}
+}
+
+@keyframes lvl-5 {
+	0% {
+		transform: rotate(25deg) scale(0.3);
+	}
+
+	100% {
+		transform: rotate(385deg) scale(0.75);
+	}
+}
