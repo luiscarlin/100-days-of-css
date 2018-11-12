@@ -1,22 +1,23 @@
 {
   "name": "100-days-of-css",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Collection of 100 days of CSS challenges",
+  "private": true,
+  "author": {
+    "name": "Luis Carlin",
+    "email": "luiscarlin@gmail.com",
+    "url": "https://github.com/LuisCarlin"
   },
+  "homepage": "https://github.com/LuisCarlin/100-days-of-css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luiscarlin/100-days-of-css.git"
   },
-  "author": "Luis Carlin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/luiscarlin/100-days-of-css/issues"
+  "license": "WTFPL",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/luiscarlin/100-days-of-css#readme",
-  "dependencies": {
+  "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
