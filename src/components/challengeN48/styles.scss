@@ -1,0 +1,67 @@
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #E47512;
+    color: #333;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+      width: 200px;
+      height: 200px;
+  }
+
+  .cube {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+    transform: translateZ(-100px) rotateX(70deg) rotateZ(-45deg);
+      transition: all 2s ease-in-out;
+
+      &:hover {
+          transform: translateZ(-100px) rotateX(-480deg) rotateZ(495deg);
+      }
+
+      .side {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+
+          &.top {
+              transform: rotateY(0deg) translateZ(100px); background: #eee;
+          }
+
+          &.bottom {
+              transform: rotateX(180deg) translateZ(100px); background: #ddd;
+          }
+
+          &.right {
+              transform: rotateY(90deg) translateZ(100px); background: #ccc;
+          }
+
+          &.left {
+              transform: rotateY(-90deg) translateZ(100px); background: #bbb;
+          }
+
+          &.back {
+              transform: rotateX(90deg) translateZ(100px); background: #aaa;
+          }
+
+          &.front {
+              transform: rotateX(-90deg) translateZ(100px); background: #999;
+          }
+      }
+  }
