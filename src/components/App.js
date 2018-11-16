@@ -1,5 +1,9 @@
+import React from 'react'
 import ErrorModal from './ErrorModal'
 
-export default App = () => {
-  <ErrorModal/>
+const App = () => {
+  return (
+    <ErrorModal />
+  )
 }
+export default App
