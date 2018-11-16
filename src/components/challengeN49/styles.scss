@@ -1,73 +1,70 @@
-// delete the following line if no text is used
-// edit the line if you wanna use other fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
-
 // use only the available space inside the 400x400 frame
 .frame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
-  border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-	overflow: hidden;
-  background: #2d3e50;
-  color: #333;
-	font-family: 'Open Sans', Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.cell {
-  position: relative;
-	display: inline-block;
-	vertical-align: top;
-	width: 20px;
-	height: 20px;
-}
-
-.dot {
-	position: absolute;
-	top: -10px;
-	left: -10px;
-	transform: translate(200px, 200px);
-	background-color: #2ecc71;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-
-	&:after {
-		box-sizing: border-box;
-		position: absolute;
-		top: -5px;
-		left: -5px;
-		width: 30px;
-		height: 30px;
-	  content: '';
-		border-radius: 50%;
-		border: 2px solid #2ecc71;
-		animation: pulse 1.5s ease-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #2d3e50;
+    color: #333;
   }
-}
 
-$size: 20px;
-$row: 1;
-$column: 1;
-@for $i from 1 through 400 {
-	@if ($row * 20) < $i {
-		$row: $row + 1;
-	}
-	$column: $i - ( ($row - 1) * 20 );
+  $size: 20px;
 
-	.cell-#{$i}:hover ~ .dot {
-		transform: translate3d(($column * $size) - ($size / 2),($row * $size) - ($size / 2),0);
-	}
-}
+  .cell {
+    position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: $size;
+      height: $size;
+  }
 
-@keyframes pulse {
-	0% { transform: scale(.5); opacity: 1; }
-	100% { transform: scale(2); opacity: 0; }
-}
+  .dot {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      transform: translate(200px, 200px);
+      background-color: #2ecc71;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      transition: all 0.3s ease-out;
+      pointer-events: none;
+
+      &:after {
+          box-sizing: border-box;
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          width: 30px;
+          height: 30px;
+        content: '';
+          border-radius: 50%;
+          border: 2px solid #2ecc71;
+          animation: pulse 1.5s ease-out infinite;
+    }
+  }
+
+  $row: 1;
+  $column: 1;
+
+  @for $i from 1 through 400 {
+      @if ($row * 20) < $i {
+          $row: $row + 1;
+      }
+      $column: $i - ( ($row - 1) * 20 );
+
+      .cell-#{$i}:hover ~ .dot {
+          transform: translate3d(($column * $size) - ($size / 2),($row * $size) - ($size / 2),0);
+      }
+  }
+
+  @keyframes pulse {
+      0% { transform: scale(.5); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+  }
