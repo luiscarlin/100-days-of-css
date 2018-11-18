@@ -1,0 +1,49 @@
+.frame {
+  background: #27ae60;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px rgba(black, 0.1);
+
+  .circle {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@keyframes ringfade {
+	0% {
+		border: white 8px;
+		opacity: 0.0;
+	}
+
+	80% {
+		border: 8px white dotted;
+		opacity: 1.0;
+	}
+
+	100% {
+		border: 8px white;
+		opacity: 0.0;
+	}
+}
+
+ @for $i from 0 through 9 {
+   .ring-#{$i} {
+     padding: $i + 1em;
+     animation: ringfade 4s infinite linear $i * 0.4s;
+   }
+ }
