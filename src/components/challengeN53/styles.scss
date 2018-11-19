@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  background: #506172;
+  height: 400px;
+  width: 400px;
+  border-radius: 2%;
+  box-shadow: 4px 8px 16px 0 rgba(black, 0.1);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+
+  .slider {
+    height: 40px;
+    width: 300px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 4px 8px 0 rgba(black, 0.3);
+
+    input {
+      width: 280px;
+      height: 10px;
+      outline: none;
+    }
+  }
+  .slider-value {
+    padding-bottom: 120px;
+    user-select: none;
+    color:#fff;
+    font-size: 60px;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
