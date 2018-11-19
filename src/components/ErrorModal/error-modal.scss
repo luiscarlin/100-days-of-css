@@ -1,8 +1,5 @@
-// delete the following line if no text is used
-// edit the line if you wanna use other fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
-// use only the available space inside the 400x400 frame
 .frame {
 	position: absolute;
 	top: 50%;
@@ -72,8 +69,9 @@
 			background-color: #ec3434;
 		}
 	}
+
 	&.out {
 		transform: scale(0);
-		transition: all 500ms cubic-bezier(0.5, 0, 0.6, 1.9);
+		transition: all 500ms cubic-bezier(0.50, -0.25, 0.60, 0.75) 0s;
 	}
 }
