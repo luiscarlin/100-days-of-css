@@ -1,0 +1,86 @@
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	background: #263A4D;
+}
+
+.ocean {
+	position: absolute;
+	bottom: -1px;
+	width: 200%;
+	height: 44%;
+	left: -50%;
+}
+
+.wave {
+  height: 33%;
+}
+
+.crest{
+	width: 50px;
+	height: 50px;
+	float: left;
+	display: block;
+	border-radius: 50%;
+	margin-top: -25px;
+}
+
+@keyframes wave1 {
+	0%   {margin-left: 0px;}
+	50%  {margin-left: 60px;}
+	100% {margin-left: 0px;}
+}
+
+.wave1 {
+	background: #406384;
+	animation: wave1 10s ease-in-out alternate infinite;
+}
+.wave1 .crest:nth-child(even){
+	background-color: #263a4d;
+}
+.wave1 .crest:nth-child(odd){
+	background-color: #406384;
+}
+
+@keyframes wave2 {
+	0%   {margin-left: 0px;}
+	50%  {margin-left:-10px;}
+	100% {margin-left: 0px;}
+}
+
+.wave2{
+	background:#5D90BF;
+	animation: wave2 7s ease-in-out alternate infinite;
+}
+.wave2 .crest:nth-child(even){
+	background-color: #5D90BF;
+}
+.wave2 .crest:nth-child(odd){
+	background-color: #406384;
+}
+
+@keyframes wave3 {
+	0%   {margin-left: 0px;}
+	50%  {margin-left: 30px;}
+	100% {margin-left: 0px;}
+}
+
+.wave3{
+	background:#7EB3E6;
+	animation: wave3 5s ease-in-out alternate infinite;
+  height: 34%;
+}
+.wave3 .crest:nth-child(even){
+	background-color: #5D90BF;
+}
+.wave3 .crest:nth-child(odd){
+	background-color: #7EB3E6;
+}
