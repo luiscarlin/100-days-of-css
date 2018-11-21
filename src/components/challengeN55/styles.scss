@@ -1,0 +1,154 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+  background-color: #2B4147;
+  color: #aaa;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 15px #000;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+.panel {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  z-index: 10;
+}
+
+.scale {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url(https://100dayscss.com/codepen/thermostat-gradient.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow:
+      inset 1px 1px 3px rgba(0,0,0,0.6),
+      inset -1px -1px 3px rgba(0,0,0,0.6);
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  transform-origin: top left;
+  top: 50%;
+  left: 50%;
+  transform: rotate(45deg);
+}
+.normal {
+  display: block;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  font-size: 12px;
+  color: gray;
+  z-index: 11;
+  transform: translateX(-50%);
+}
+
+.room {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  font-size: 14px;
+  color: gray;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #98317A;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  /* overflow: hidden; */
+}
+.current-temp {
+  position: relative;
+  width: 150px;
+  height: 75px;
+  display: flex;
+}
+
+.current-temp span {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  letter-spacing: -4px;
+  line-height: 75px;
+}
+
+.container .current-temp span:nth-child(1) {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  transition: .5s ease-in-out;
+}
+.container .current-temp span:nth-child(2) {
+  transform: translateX(20%) scale(0);
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+
+.container:hover .current-temp span:nth-child(1) {
+  transform: translateX(-100%) scale(0);
+  opacity: 0;
+}
+.container:hover .current-temp span:nth-child(2) {
+  transform: translateX(-100%) scale(1);
+  opacity: 1;
+}
+
+.arrow {
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  background-color: #6C6C6C;
+  transform-origin: 0 70px ;
+  top: 0;
+  left: 50%;
+  transform: rotate(-60deg);
+  transition: transform .5s ease-in-out;
+}
+.container:hover .arrow {
+  transform: rotate(-50deg);
+}
