@@ -16,9 +16,9 @@ export default class ErrorModal extends React.Component {
 
   render() {
     return (
-      <div className="frame">
-        <div className="center">
-          <div className={this.state.hide ? "modal out" : "modal" }>
+      <div className="error-modal-container">
+        <div className="error-modal-container--center">
+          <div className={this.state.hide ? "error-modal error-modal--out" : "error-modal" }>
             <img src="http://100dayscss.com/codepen/alert.png" alt="Error" />
             <label>Oh Snap!</label>
             <p>An error has occured while creating an error report.</p>

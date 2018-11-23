@@ -1,13 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
-.frame {
+.error-modal-container {
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	width: 400px;
 	height: 400px;
-	margin-top: -200px;
-	margin-left: -200px;
 	border-radius: 2px;
 	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -19,14 +15,14 @@
 	background: #3f3f3f;
 }
 
-.center {
+.error-modal-container--center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.modal {
+.error-modal {
 	width: 280px;
 	height: 210px;
 	text-align: center;
@@ -70,7 +66,7 @@
 		}
 	}
 
-	&.out {
+	&.error-modal--out {
 		transform: scale(0);
 		transition: all 500ms cubic-bezier(0.50, -0.25, 0.60, 0.75) 0s;
 	}
