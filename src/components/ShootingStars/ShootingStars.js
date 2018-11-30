@@ -13,12 +13,10 @@ const createStarList = () => {
 }
 
 export default () => (
-	<div className="frame">
-    <div className="sky">
-			{ createStarList() }
-      <div className="star__shooting shooting-1"></div>
-      <div className="star__shooting shooting-2"></div>
-      <div className="star__shooting shooting-3"></div>
-    </div>
+  <div className="sky">
+		{ createStarList() }
+    <div className="star__shooting shooting-1"></div>
+    <div className="star__shooting shooting-2"></div>
+    <div className="star__shooting shooting-3"></div>
   </div>
 )

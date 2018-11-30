@@ -1,32 +1,14 @@
 $numberOfStars: 250;
 $numberOfShooting: 3;
 
-.frame {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
-  border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-	overflow: hidden;
-  background: #fff;
-}
-
 .sky {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
 	background: linear-gradient(to bottom, #1d4253 0%, #6bb5c4 100%);
 	border-radius: 50%;
 	height: 280px;
 	width: 280px;
 
-	.star{
+	.star {
 		background-color: #FFF;
 		border-radius: 50%;
 		height: 1px;
