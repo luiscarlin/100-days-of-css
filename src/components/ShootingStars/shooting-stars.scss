@@ -8,7 +8,7 @@ $numberOfShooting: 3;
 	height: 280px;
 	width: 280px;
 
-	.star {
+	.sky--star {
 		background-color: #FFF;
 		border-radius: 50%;
 		height: 1px;
@@ -18,7 +18,7 @@ $numberOfShooting: 3;
 		opacity: 1;
 	}
 
-	.star__shooting{
+	.sky--star__shooting{
 		background: url('https://100dayscss.com/codepen/shooting-star.png') center center no-repeat;
 		width: 120px;
     height: 2px;
@@ -29,7 +29,7 @@ $numberOfShooting: 3;
 }
 
 @for $i from 1 through $numberOfStars {
-	.star.star-#{$i} {
+	.sky--star.sky--star-#{$i} {
 		top: random(280) + px;
 		left: random(280) + px;
 		animation: random(5) + s sparkle (random(50)/-10) + s infinite;
@@ -37,7 +37,7 @@ $numberOfShooting: 3;
 }
 
 @for $i from 1 through $numberOfShooting {
-	.star__shooting.shooting-#{$i} {
+	.sky--star__shooting.shooting-#{$i} {
 		top: (random(280)-40) + px;
 		animation: (random(6) + 10) + s shooting ((random(5) + 10)/-10) + s infinite normal none running;
 	}
