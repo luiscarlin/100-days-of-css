@@ -3,14 +3,11 @@ import './app.scss'
 import ErrorModal from './ErrorModal'
 import ShootingStars from './ShootingStars'
 
-const componentsList = [
-  // <ErrorModal />,
-  <ShootingStars />
-]
 const App = () => {
   return (
-    <div className='page'>
-      { componentsList.map((component, index) => <div className='component' key={index}>{component}</div>) }
+    <div className='card-container'>
+      <div className='card card__dark'><ErrorModal /></div>
+      <div className='card'><ShootingStars /></div>
     </div>
   )
 }
